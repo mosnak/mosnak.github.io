@@ -1,0 +1,457 @@
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;500&display=swap');
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Raleway', sans-serif;
+
+$defaultTextColor: #333333;
+$importantTextColor: #EF4130;
+$fontMain: 'Raleway', sans-serif;
+$mainFontWeightLight: 300;
+$mainFontWeightMedium: 500;
+$fontDefault: 'Open Sans', sans-serif;
+
+@mixin link($color: $defaultTextColor, $font: $fontMain) {
+  color: $color;
+  font-family: $font;
+  text-decoration: none;
+}
+
+@mixin phone() {
+  padding: 10px 25px 10px 25px;
+  background: white;
+  svg {
+    width: 26px;
+  }
+  span {
+    margin-left: 15px;
+  }
+}
+
+.wrapper {
+  &--outer {
+    //background-image: url("images/cloud_PNG4.png"), url("images/shade@2x.png"), ;
+    //background-position: right, right;
+    //background-repeat: no-repeat, no-repeat;
+  }
+  &--inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  &--colored {
+    background: #5987A4;
+  }
+}
+
+.header {
+  display: flex;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+
+}
+
+.menu {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 40px;
+    a {
+      display: flex;
+      align-items: center;
+      @include link($defaultTextColor, $fontMain);
+    }
+    &--phone {
+      a {
+        @include phone()
+        //padding: 10px 25px 10px 25px;
+        //background: white;
+        //svg {
+        //  width: 26px;
+        //}
+        //span {
+        //  margin-left: 15px;
+        //}
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__important {
+    font-family: $fontMain;
+    font-size: 23px;
+    font-weight: $mainFontWeightMedium;
+    color: $importantTextColor;
+    z-index: 99;
+    max-width: 630px;
+    &--small-margin {
+      margin-bottom: 16px;
+    }
+    &--medium-margin {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    font-family: $fontMain;
+    font-size: 57px;
+    font-weight: $mainFontWeightMedium;
+    color: $defaultTextColor;
+    z-index: 99;
+    max-width: 630px;
+  }
+  &__regular {
+    font-family: $fontDefault;
+    font-size: 23px;
+    color: $defaultTextColor;
+    margin-bottom: 55px;
+    z-index: 99;
+    max-width: 630px;
+  }
+  &__list {
+    margin-bottom: 30px;
+    z-index: 99;
+    max-width: 630px;
+    div {
+      font-family: $fontDefault;
+      font-size: 23px;
+      color: $defaultTextColor;
+      margin-bottom: 10px;
+      svg {
+        width: 20px;
+        height: 15px;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    width: 250px;
+    margin-bottom: 10px;
+
+    a {
+      width: 100% ;
+      padding: 12px 15px 12px 15px;
+      font-family: $fontMain;
+      font-size: 23px;
+      font-weight: $mainFontWeightMedium;
+      color: white;
+      background: $defaultTextColor;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+    }
+
+
+  }
+
+  &__image {
+    position: absolute;
+    left: 600px;
+    top: 0;
+    picture {
+    }
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cta {
+  display: flex;
+  margin: 50px 0 50px 0;
+  padding: 40px 60px 40px 60px;
+  justify-content: space-between;
+  align-items: center;
+  background: #5987A4;
+  border-radius: 5px;
+  &__text {
+    font-family: $fontMain;
+    font-size: 23px;
+    color: white;
+    &--dark {
+      color: $defaultTextColor;
+    }
+  }
+  &__btn {
+    a {
+      @include phone();
+      display: flex;
+      border-radius: 10px;
+      align-items: center;
+      color: black;
+      text-decoration: none;
+    }
+    &--light {
+      a {
+        padding: 12px 15px 12px 15px;
+        background: #333333;
+        color: white;
+        width: 220px;
+        font-size: 23px;
+      }
+    }
+  }
+  &--light {
+    border-radius: 10px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+  }
+
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px 0 100px;
+  margin: 130px 0 30px 0;
+  p {
+    font-family: $fontDefault;
+    font-size: 23px;
+    color: $defaultTextColor;
+    text-align: center;
+  }
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  padding: 0 150px;
+  margin-bottom: 60px;
+  &__h {
+    margin: 0;
+    padding: 0;
+    font-family: $fontMain;
+    font-size: 57px;
+    font-weight: $mainFontWeightMedium;
+    color: $defaultTextColor;
+  }
+}
+
+.accordions {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  &--open {
+
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $fontMain;
+    font-size: 23px;
+    color: $defaultTextColor;
+    cursor: pointer;
+    .open {
+      display: flex;
+    }
+    .close {
+      display: none;
+    }
+    &--open {
+      color: $importantTextColor;
+      .open {
+        display: none;
+      }
+      .close {
+        display: flex;
+      }
+    }
+  }
+  &__text {
+    overflow: hidden;
+    font-family: $fontDefault;
+    font-size: 23px;
+    color: $defaultTextColor;
+  }
+}
+
+.facts {
+  position: relative;
+  display: flex;
+  margin-bottom: 170px;
+  margin-top: 150px;
+  padding: 110px 80px 110px 80px;
+  justify-content: space-between;
+  &__cta {
+    position: absolute;
+    bottom: -105px;
+    left: 0;
+    width: 100%;
+  }
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    margin-bottom: 60px;
+    font-family: $fontMain;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+  }
+  &__number {
+    margin-bottom: 20px;
+    font-family: $fontMain;
+    font-size: 51px;
+    color: white;
+    text-align: center;
+  }
+  &__name {
+    font-family: $fontMain;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+  }
+}
+
+.text-important {
+  text-align: center;
+  font-family: $fontMain;
+  font-size: 23px;
+  color: $importantTextColor;
+}
+
+.story {
+  position: relative;
+  display: flex;
+  margin-bottom: 130px;
+  &__text {
+    background: #5987A4;
+    margin-top: 40px;
+    padding: 80px 100px 80px 60px;
+    color: white;
+    border-radius: 10px;
+    font-size: 23px;
+    font-family: $fontDefault;
+  }
+  &__image {
+    margin-left: -45px;
+  }
+}
+
+.showcase {
+  margin-top: 120px;
+  display: flex;
+  &__image {
+    max-width: 480px;
+    img {
+      //width: 100%;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    justify-content: center;
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 55px;
+  }
+  &__content {
+    font-size: 23px;
+    font-family: $fontDefault;
+    color: $defaultTextColor;
+  }
+}
+
+.footer {
+  display: flex;
+  &__cta {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+  }
+  &__list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  &__icons {
+    display: flex;
+    flex-direction: row;
+  }
+  &__icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+  &__main-text {
+    font-size: 57px;
+    font-family: $fontMain;
+    color: #EF4130;
+    margin-bottom: 15px;
+  }
+  &__info-text {
+    font-size: 23px;
+    font-family: $fontMain;
+    color: $defaultTextColor;
+    margin-bottom: 5px;
+  }
+  &__standard-text {
+    font-size: 23px;
+    font-family: $fontMain;
+    color: $defaultTextColor;
+    margin-bottom: 15px;
+    text-decoration: none;
+    &--important {
+      color: $importantTextColor;
+    }
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  div {
+    font-size: 23px;
+    font-family: $fontMain;
+    color: $defaultTextColor;
+    margin-bottom: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: $defaultTextColor;
+  }
+}
+
+.webmaster {
+  width: 140px;
+  margin: 20px 0 30px 0;
+}
+
+.scroll-icon {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  &--show {
+    display: block;
+  }
+  svg {
+    width: 40px;
+  }
+}
