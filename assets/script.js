@@ -1,5 +1,17 @@
 $(document).ready(function (){
 
+    var defaultOptions = {
+        container: document.body,
+        panelSelector: '.panel',
+        directionThreshold: 0,
+        delay: 0,
+        duration: 300,
+        easing: function(t) { return t },
+    };
+
+    new PanelSnap(defaultOptions);
+
+
     $('.accordion__text').each(function (i) {
         $(this).parent().data('height', $(this).height());
         $(this).height(0);
@@ -82,5 +94,8 @@ $(document).ready(function (){
     //     console.log(el.style.backgroundPositionX)
     //     el.style.backgroundPositionX = el.style.backgroundPositionX + 3 + "px";
     //     // el.style.backgroundPositionY = -e.offsetY - 500 + "px";
+    // });
+    // document.addEventListener("DOMContentLoaded", function() {
+    //
     // });
 })

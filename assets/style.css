@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -454,12 +454,46 @@ body {
   overflow-x: hidden;
 }
 
+.mainbtn {
+  padding: 12px 15px 12px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+  background: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.mainbtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.second-cta {
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+}
+.second-cta a {
+  text-decoration: none;
+  color: black;
+}
+
 .wrapper--inner {
   max-width: 1280px;
   margin: 0 auto;
 }
 .wrapper--colored {
   background: #5987A4;
+}
+.wrapper--relative {
+  position: relative;
+}
+.wrapper--fullscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -487,12 +521,13 @@ body {
   display: flex;
   align-items: center;
   color: #333333;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
 .menu__item--phone a {
   padding: 10px 25px 10px 25px;
   background: white;
+  border-radius: 8px;
 }
 .menu__item--phone a svg {
   width: 26px;
@@ -508,8 +543,11 @@ body {
   justify-content: flex-end;
   margin-top: 180px;
 }
+.hero--no-margin {
+  margin: 0;
+}
 .hero__important {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   font-weight: 500;
   color: #EF4130;
@@ -523,12 +561,12 @@ body {
   margin-bottom: 30px;
 }
 .hero__title {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 57px;
   font-weight: 500;
   color: #333333;
   z-index: 99;
-  max-width: 630px;
+  max-width: 660px;
 }
 .hero__regular {
   font-family: "Open Sans", sans-serif;
@@ -536,12 +574,12 @@ body {
   color: #333333;
   margin-bottom: 55px;
   z-index: 99;
-  max-width: 630px;
+  max-width: 660px;
 }
 .hero__list {
   margin-bottom: 30px;
   z-index: 99;
-  max-width: 630px;
+  max-width: 660px;
 }
 .hero__list div {
   font-family: "Open Sans", sans-serif;
@@ -561,7 +599,7 @@ body {
 .hero__button a {
   width: 100%;
   padding: 12px 15px 12px 15px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   font-weight: 500;
   color: white;
@@ -569,6 +607,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
+}
+.hero__button a a {
+  color: white;
+  text-decoration: none;
 }
 .hero__image {
   position: absolute;
@@ -591,9 +633,10 @@ body {
   border-radius: 5px;
 }
 .cta__text {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: white;
+  text-transform: uppercase;
 }
 .cta__text--dark {
   color: #333333;
@@ -601,11 +644,12 @@ body {
 .cta__btn a {
   padding: 10px 25px 10px 25px;
   background: white;
+  border-radius: 8px;
   display: flex;
-  border-radius: 10px;
   align-items: center;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .cta__btn a svg {
   width: 26px;
@@ -650,7 +694,7 @@ body {
 .title__h {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 57px;
   font-weight: 500;
   color: #333333;
@@ -661,11 +705,15 @@ body {
   flex-direction: column;
 }
 
+.accordion hr {
+  border: solid 1px #D6D6D6;
+}
 .accordion__title {
   display: flex;
+  padding: 10px 0 10px 0;
   justify-content: space-between;
   align-items: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: #333333;
   cursor: pointer;
@@ -714,20 +762,20 @@ body {
 }
 .fact__title {
   margin-bottom: 60px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: white;
   text-align: center;
 }
 .fact__number {
   margin-bottom: 20px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 51px;
   color: white;
   text-align: center;
 }
 .fact__name {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: white;
   text-align: center;
@@ -735,7 +783,7 @@ body {
 
 .text-important {
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 23px;
   color: #EF4130;
 }
@@ -761,9 +809,15 @@ body {
 .showcase {
   margin-top: 120px;
   display: flex;
+  background: white;
+  border-radius: 10px;
 }
 .showcase__image {
   max-width: 480px;
+}
+.showcase__image img {
+  border-radius: 10px 0px 0px 10px;
+  vertical-align: bottom;
 }
 .showcase__text {
   display: flex;
@@ -805,19 +859,19 @@ body {
 }
 .footer__main-text {
   font-size: 57px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #EF4130;
   margin-bottom: 15px;
 }
 .footer__info-text {
   font-size: 23px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333333;
   margin-bottom: 5px;
 }
 .footer__standard-text {
   font-size: 23px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333333;
   margin-bottom: 15px;
   text-decoration: none;
@@ -832,7 +886,7 @@ body {
 }
 .copy div {
   font-size: 23px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #333333;
   margin-bottom: 5px;
 }
@@ -862,13 +916,31 @@ body {
 }
 
 .footer-shade {
-  background: linear-gradient(0deg, #adc4d2 0%, white 83%);
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(0deg, #adc4d2 40%, white 83%);
 }
 .footer-shade .footer-clouds {
-  background-image: url("images/cloud_PNG4.png");
+  background-image: url("images/footer_clouds.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  width: 1954px;
+  height: 1066px;
+  z-index: -1;
+}
+.footer-shade .footer-clouds--left {
+  left: -460px;
+  bottom: 560px;
+}
+.footer-shade .footer-clouds--right {
+  right: -1250px;
+  bottom: 600px;
+}
+.footer-shade .footer-clouds--center {
+  top: 0;
+  left: 60px;
 }
 
 .header-shade {
@@ -895,6 +967,102 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
+}
+
+/*homepage*/
+.home-scroll-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 170px;
+}
+.home-scroll-icon svg {
+  width: 25px;
+}
+
+.companies {
+  display: flex;
+  padding: 0 20px 0 20px;
+  justify-content: space-between;
+}
+.companies__company {
+  width: 280px;
+}
+.companies__company img {
+  width: 100%;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxes__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+}
+.boxes__cta {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+}
+.boxes__cta .mainbtn {
+  margin-right: 20px;
+}
+
+.boxes__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxes__item--with-margin {
+  margin: 0 40px 0 40px;
+}
+
+.box-title {
+  margin-bottom: 30px;
+}
+
+.box-text {
+  font-size: 23px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+}
+
+.description-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-image img {
+  width: 100%;
+}
+
+.warranty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.warranty__images {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.warranty__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.warranty__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 23px;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
