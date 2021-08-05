@@ -450,6 +450,10 @@ template {
   display: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper--inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -466,6 +470,9 @@ template {
   align-items: center;
 }
 
+.menu {
+  z-index: 9;
+}
 .menu__wrapper {
   display: flex;
   align-items: center;
@@ -499,6 +506,7 @@ template {
   position: relative;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 180px;
 }
 .hero__important {
   font-family: "Raleway", sans-serif;
@@ -565,7 +573,7 @@ template {
 .hero__image {
   position: absolute;
   left: 600px;
-  top: 0;
+  top: -100px;
 }
 .clearfix:after {
   content: "";
@@ -775,6 +783,7 @@ template {
 
 .footer {
   display: flex;
+  margin-top: 85px;
 }
 .footer__cta {
   display: flex;
@@ -834,7 +843,8 @@ template {
 
 .webmaster {
   width: 140px;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
 }
 
 .scroll-icon {
@@ -849,6 +859,42 @@ template {
 }
 .scroll-icon svg {
   width: 40px;
+}
+
+.footer-shade {
+  background: linear-gradient(0deg, #adc4d2 0%, white 83%);
+}
+.footer-shade .footer-clouds {
+  background-image: url("images/cloud_PNG4.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header-shade {
+  background-image: url("images/shade.png");
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -373px;
+  width: 100%;
+  z-index: -2;
+}
+
+#header-clouds-wrapp {
+  position: absolute;
+  width: 100%;
+  top: -276px;
+}
+#header-clouds-wrapp .header-clouds {
+  background-image: url("images/cloud_PNG4.png");
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
