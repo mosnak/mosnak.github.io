@@ -1,15 +1,15 @@
 $(document).ready(function (){
 
-    var defaultOptions = {
-        container: document.body,
-        panelSelector: '.panel',
-        directionThreshold: 0,
-        delay: 0,
-        duration: 300,
-        easing: function(t) { return t },
-    };
-
-    new PanelSnap(defaultOptions);
+    // var defaultOptions = {
+    //     container: document.body,
+    //     panelSelector: '.panel',
+    //     directionThreshold: 50,
+    //     delay: 0,
+    //     duration: 300,
+    //     easing: function(t) { return t },
+    // };
+    //
+    // new PanelSnap(defaultOptions);
 
 
     $('.accordion__text').each(function (i) {
@@ -48,6 +48,9 @@ $(document).ready(function (){
     const screenWidth = $(window).width();
     const siteWidth = $('.wrapper--inner').width();
     const backgroundOffset = (screenWidth - siteWidth) / 2;
+    const mapWidth = (screenWidth - siteWidth) / 2 + siteWidth - 660
+
+    // $('#map').width(mapWidth)
 
     $('.header-shade').css({
         right: '-' + backgroundOffset + 'px',
@@ -57,6 +60,11 @@ $(document).ready(function (){
     $('#header-clouds-wrapp').css({
         right: '-' + backgroundOffset + 'px',
         height: '888px'
+    })
+
+    $('.section-clouds').css({
+        right: '-' + backgroundOffset + 'px',
+        // height: '888px'
     })
 
 

@@ -45,6 +45,10 @@ $fontDefault: 'Open Sans', sans-serif;
   }
 }
 
+* {
+  z-index: 99;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -138,7 +142,14 @@ body {
   position: relative;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 180px;
+  margin-top: 0;
+
+  &--contact {
+    width: 660px;
+  }
+  &--home {
+    margin-top: 80px;
+  }
   &--no-margin {
     margin: 0;
   }
@@ -202,7 +213,10 @@ body {
   &__image {
     position: absolute;
     left: 600px;
-    top: -100px;
+    top: 0;
+    &--home {
+      top: -70px
+    }
     picture {
     }
   }
@@ -552,14 +566,15 @@ body {
   position: absolute;
   width: 100%;
   top: -276px;
-  .header-clouds {
-    background-image: url("images/cloud_PNG4.png");
-    background-position-x: right;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
-  }
+}
+
+.header-clouds {
+  background-image: url("images/cloud_PNG4.png");
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
 }
 
 /*homepage*/
@@ -567,7 +582,8 @@ body {
 .home-scroll-icon {
   display: flex;
   justify-content: center;
-  margin-bottom: 170px;
+  margin-top: 90px;
+
   svg {
     width: 25px;
   }
@@ -659,5 +675,68 @@ body {
     margin: 0 auto;
     font-size: 23px;
     font-family: $fontDefault;
+  }
+}
+
+.panel {
+  position: relative;
+}
+
+.panel-indicator {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__elem {
+    border-left: solid 2px black;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: $fontMain;
+    font-size: 17px;
+    &--active {
+      border-left: solid 5px black;
+    }
+  }
+}
+
+.section-shade {
+  background-image: url(images/shade.png);
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0px;
+  height: 100vh;
+  top: -40vh;
+  width: 100%;
+}
+
+.section-clouds {
+  background-image: url(images/cloud_PNG4.png);
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -311.5px;
+  top: -40vh;
+  height: 1066px;
+  width: 1954px;
+}
+
+.hero__map {
+  position: absolute;
+  left: 660px;
+  top: 0;
+  #map {
+    width: 500px;
+    height: 500px;
   }
 }
