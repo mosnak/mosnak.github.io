@@ -167,6 +167,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   margin-top: 0;
+  &__cta {
+    display: flex;
+    align-items: baseline;
+  }
   &--internal {
     margin-top: 178px;
   }
@@ -184,7 +188,7 @@ body {
   &__important {
     font-family: $fontMain;
     font-size: 1.375rem;
-    font-weight: $mainFontWeightMedium;
+    font-weight: $mainFontWeightBold;
     color: $importantTextColor;
     z-index: 99;
     max-width: 700px;
@@ -207,11 +211,16 @@ body {
   }
   &__regular {
     font-family: $fontDefault;
-    font-size: 23px;
+    font-size: 1.375rem;
+    line-height: 2rem;
     color: $defaultTextColor;
     margin-bottom: 55px;
     z-index: 99;
     max-width: 700px;
+    &--nooverlap {
+      max-width: 565px;
+      margin-bottom: 0;
+    }
     &--contact {
       margin-bottom: 30px;
     }
@@ -240,7 +249,9 @@ body {
     display: flex;
     width: 250px;
     margin-bottom: 10px;
-
+    &--with-margin {
+      margin-right: 30px;
+    }
     a {
       text-align: center;
       width: 100% ;
@@ -443,6 +454,11 @@ body {
   font-size: 1.375rem;
   color: $importantTextColor;
   line-height: 2rem;
+  font-weight: $mainFontWeightBold;
+  &--footer {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
 
 .story {
@@ -488,12 +504,13 @@ body {
   }
   &__title {
     text-align: left;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
   &__content {
-    font-size: 23px;
+    font-size: 1.375rem;
     font-family: $fontDefault;
     color: $defaultTextColor;
+    line-height: 2rem;
   }
 }
 
@@ -514,10 +531,11 @@ body {
   &__icons {
     display: flex;
     flex-direction: row;
+    margin-top: 12px;
   }
   &__icon {
     width: 25px;
-    margin-right: 10px;
+    margin-right: 16px;
   }
   &__main-text {
     font-size: 57px;
@@ -526,19 +544,22 @@ body {
     margin-bottom: 15px;
   }
   &__info-text {
-    font-size: 23px;
+    font-size: 1.375rem;
     font-family: $fontMain;
     color: $defaultTextColor;
+    font-weight: $mainFontWeightMedium;
     margin-bottom: 5px;
   }
   &__standard-text {
-    font-size: 23px;
+    font-size: 1.375rem;
     font-family: $fontMain;
     color: $defaultTextColor;
     margin-bottom: 15px;
     text-decoration: none;
+    font-weight: $mainFontWeightMedium;
     &--important {
       color: $importantTextColor;
+      font-weight: $mainFontWeightBold;
     }
   }
 }
@@ -557,7 +578,9 @@ body {
   display: flex;
   flex-direction: column;
   div {
-    font-size: 23px;
+    font-size: 1rem;
+    font-weight: $mainFontWeightMedium;
+    //line-height: 2rem;
     font-family: $fontMain;
     color: $defaultTextColor;
     margin-bottom: 5px;
@@ -693,10 +716,10 @@ body {
   }
   &__cta {
     display: flex;
-    margin-top: 25px;
+    margin-top: 56px;
     align-items: center;
     .mainbtn {
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
 }
@@ -718,9 +741,9 @@ body {
 }
 
 .box-text {
-  font-size: 23px;
+  font-size: 1.375rem;
   font-family: $fontDefault;
-  line-height: 1.4;
+  line-height: 2rem;
 }
 
 .description {
@@ -746,6 +769,7 @@ body {
     width: 500px;
     justify-content: space-between;
     margin: 0 auto;
+    margin-bottom: 43px;
   }
   &__title {
     font-family: $fontMain;
@@ -755,8 +779,11 @@ body {
   &__content {
     max-width: 1000px;
     margin: 0 auto;
-    font-size: 23px;
+    margin-bottom: 42px;
+    font-size: 1.375rem;
     font-family: $fontDefault;
+    line-height: 2rem;
+
   }
 }
 
@@ -794,10 +821,12 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: 0px;
-  height: 100vh;
-  top: -40vh;
-  width: 100%;
+  left: 0px;
+  //height: 100vh;
+  height: 1311px;
+  //top: -40vh;
+  top: -435px;
+  width: 3030px;
   z-index: 80;
 }
 
@@ -898,4 +927,11 @@ body {
   cursor: pointer;
   font-family: $fontMain;
   font-size: 25px;
+}
+
+.main-title {
+  font-family: $fontMain;
+  font-size: 3.375rem;
+  font-weight: $mainFontWeightLight;
+  margin-bottom: 40px;
 }
