@@ -1,30 +1,39 @@
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
 //@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Open+Sans&display=swap');
 //font-family: 'Open Sans', sans-serif;
 //font-family: 'Montserrat', sans-serif;
+//<style>
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
+//</style>
+
 
 $defaultTextColor: #333333;
 $importantTextColor: #EF4130;
 $fontMain: 'Montserrat', sans-serif;
-$mainFontWeightLight: 300;
-$mainFontWeightMedium: 500;
+$mainFontWeightLight: 200;
+$mainFontWeightMedium: 400;
+$mainFontWeightBold: 500;
 $fontDefault: 'Open Sans', sans-serif;
 
 @mixin link($color: $defaultTextColor, $font: $fontMain) {
   color: $color;
   font-family: $font;
   text-decoration: none;
+  font-size: 1.375rem;
 }
 
 @mixin phone() {
-  padding: 10px 25px 10px 25px;
+  padding: 13px 25px 13px 25px;
   background: white;
   border-radius: 8px;
   svg {
-    width: 26px;
+    //width: 26px;
+    width: 30px;
   }
   span {
+    font-weight: $mainFontWeightMedium;
     margin-left: 15px;
   }
 }
@@ -32,21 +41,27 @@ $fontDefault: 'Open Sans', sans-serif;
 @mixin mainbtn() {
   padding: 12px 15px 12px 15px;
   font-family: "Montserrat", sans-serif;
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 1.375rem;
+  font-weight: $mainFontWeightMedium;
   color: white;
   background: #333333;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
   a {
+    text-align: center;
     color: white;
     text-decoration: none;
   }
 }
 
+html {
+  font-size: 16px;
+}
+
 * {
   z-index: 99;
+  font-family: $fontDefault;
 }
 
 body {
@@ -122,12 +137,17 @@ body {
     margin-left: 40px;
     a {
       display: flex;
-      align-items: center;
+      //align-items: center;
+      font-size: 1.5rem!important;
+      //display: flex;
+      align-items: end;
+      font-weight: $mainFontWeightMedium;
       @include link($defaultTextColor, $fontMain);
     }
     &--phone {
       a {
         @include phone()
+
         //padding: 10px 25px 10px 25px;
         //background: white;
         //svg {
@@ -163,11 +183,12 @@ body {
   }
   &__important {
     font-family: $fontMain;
-    font-size: 23px;
+    font-size: 1.375rem;
     font-weight: $mainFontWeightMedium;
     color: $importantTextColor;
     z-index: 99;
-    max-width: 630px;
+    max-width: 700px;
+    line-height: 2rem;
     &--small-margin {
       margin-bottom: 16px;
     }
@@ -177,11 +198,12 @@ body {
   }
   &__title {
     font-family: $fontMain;
-    font-size: 57px;
-    font-weight: $mainFontWeightMedium;
+    font-size: 3.375rem;
+    font-weight: $mainFontWeightLight;
     color: $defaultTextColor;
     z-index: 99;
-    max-width: 660px;
+    max-width: 700px;
+    margin-top: 10px;
   }
   &__regular {
     font-family: $fontDefault;
@@ -189,7 +211,7 @@ body {
     color: $defaultTextColor;
     margin-bottom: 55px;
     z-index: 99;
-    max-width: 660px;
+    max-width: 700px;
     &--contact {
       margin-bottom: 30px;
     }
@@ -204,7 +226,7 @@ body {
     max-width: 660px;
     div {
       font-family: $fontDefault;
-      font-size: 23px;
+      font-size: 1.375rem;
       color: $defaultTextColor;
       margin-bottom: 10px;
       svg {
@@ -220,7 +242,10 @@ body {
     margin-bottom: 10px;
 
     a {
+      text-align: center;
       width: 100% ;
+      font-size: 1.375rem;
+      font-weight: $mainFontWeightMedium;
       @include mainbtn();
     }
   }
@@ -415,8 +440,9 @@ body {
 .text-important {
   text-align: center;
   font-family: $fontMain;
-  font-size: 23px;
+  font-size: 1.375rem;
   color: $importantTextColor;
+  line-height: 2rem;
 }
 
 .story {
@@ -637,10 +663,11 @@ body {
 .home-scroll-icon {
   display: flex;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: 70px;
 
   svg {
-    width: 25px;
+    //width: 25px;
+    width: 44px
   }
 }
 
@@ -753,7 +780,7 @@ body {
     display: flex;
     align-items: center;
     font-family: $fontMain;
-    font-size: 17px;
+    font-size: 1rem;
     &--active {
       border-left: solid 5px black;
     }
