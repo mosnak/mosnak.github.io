@@ -455,8 +455,11 @@ html {
 }
 
 * {
-  z-index: 99;
   font-family: "Open Sans", sans-serif;
+}
+
+.z-top {
+  z-index: -999;
 }
 
 body {
@@ -464,17 +467,13 @@ body {
 }
 
 .mainbtn {
-  padding: 12px 15px 12px 15px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.375rem;
-  font-weight: 400;
-  color: white;
   background: #333333;
-  text-decoration: none;
-  text-transform: uppercase;
   border-radius: 10px;
 }
 .mainbtn a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -484,13 +483,12 @@ body {
   height: auto !important;
 }
 
-.second-cta {
-  font-family: "Montserrat", sans-serif;
-  font-size: 23px;
-}
 .second-cta a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
   text-decoration: none;
   color: black;
+  font-weight: 200;
 }
 
 .wrapper--inner {
@@ -498,7 +496,11 @@ body {
   margin: 0 auto;
 }
 .wrapper--colored {
-  background: #5987A4;
+  background-image: url("./images/assets.newatlas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #5987A4;
 }
 .wrapper--relative {
   position: relative;
@@ -566,12 +568,11 @@ body {
   align-items: baseline;
 }
 .hero--internal {
-  margin-top: 178px;
+  margin-top: 80px;
 }
 .hero--contact {
-  width: 625px;
-  margin-bottom: 176px;
-  margin-top: 100px;
+  flex: 1;
+  margin-top: 30px;
 }
 .hero--home {
   margin-top: 80px;
@@ -585,7 +586,7 @@ body {
   font-weight: 500;
   color: #EF4130;
   z-index: 99;
-  max-width: 700px;
+  max-width: 600px;
   line-height: 2rem;
 }
 .hero__important--small-margin {
@@ -610,7 +611,7 @@ body {
   color: #333333;
   margin-bottom: 55px;
   z-index: 99;
-  max-width: 700px;
+  max-width: 600px;
 }
 .hero__regular--nooverlap {
   max-width: 565px;
@@ -626,7 +627,7 @@ body {
 .hero__list {
   margin-bottom: 30px;
   z-index: 99;
-  max-width: 660px;
+  max-width: 600px;
 }
 .hero__list div {
   font-family: "Open Sans", sans-serif;
@@ -640,7 +641,6 @@ body {
 }
 .hero__button {
   display: flex;
-  width: 250px;
   margin-bottom: 10px;
 }
 .hero__button--with-margin {
@@ -651,20 +651,26 @@ body {
   width: 100%;
   font-size: 1.375rem;
   font-weight: 400;
-  padding: 12px 15px 12px 15px;
+  background: #333333;
+  border-radius: 10px;
+  height: 56px !important;
+  padding: 0 25px 0 25px !important;
+  line-height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: white;
+  text-decoration: none;
+}
+.hero__button a a {
   font-family: "Montserrat", sans-serif;
   font-size: 1.375rem;
   font-weight: 400;
-  color: white;
-  background: #333333;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 10px;
-}
-.hero__button a a {
   text-align: center;
   color: white;
   text-decoration: none;
+}
+.hero__button--internal a {
+  width: auto;
 }
 .hero__image {
   position: absolute;
@@ -676,7 +682,7 @@ body {
   top: -70px;
 }
 .hero__image--internal {
-  top: -130px;
+  top: -70px;
 }
 .clearfix:after {
   content: "";
@@ -691,11 +697,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #5987A4;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .cta__text {
   font-family: "Montserrat", sans-serif;
-  font-size: 23px;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: white;
   text-transform: uppercase;
 }
@@ -711,6 +718,9 @@ body {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 .cta__btn a svg {
   width: 30px;
@@ -721,13 +731,13 @@ body {
 }
 .cta__btn a span {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
 }
 .cta__btn--light a {
   padding: 12px 15px 12px 15px;
   background: #333333;
   color: white;
-  width: 220px;
-  font-size: 23px;
+  font-size: 1.375rem;
 }
 .cta--light {
   border-radius: 10px;
@@ -748,7 +758,9 @@ body {
 }
 .text p {
   font-family: "Open Sans", sans-serif;
-  font-size: 23px;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  font-weight: 400;
   color: #333333;
   text-align: center;
 }
@@ -757,7 +769,6 @@ body {
   display: flex;
   text-align: center;
   padding: 0 150px;
-  margin-bottom: 60px;
 }
 .title__h {
   margin: 0;
@@ -781,10 +792,13 @@ body {
   padding: 10px 0 10px 0;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 23px;
   color: #333333;
   cursor: pointer;
+}
+.accordion__title span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 .accordion__title .open {
   display: flex;
@@ -804,8 +818,10 @@ body {
 .accordion__text {
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
-  font-size: 23px;
+  font-size: 1.375rem;
   color: #333333;
+  font-weight: 400;
+  line-height: 2rem;
 }
 
 .facts {
@@ -874,11 +890,15 @@ body {
   padding: 80px 100px 80px 60px;
   color: white;
   border-radius: 10px;
-  font-size: 23px;
+  font-size: 1.375rem;
+  line-height: 2rem;
   font-family: "Open Sans", sans-serif;
 }
 .story__image {
   margin-left: -45px;
+}
+.story__image img {
+  border-radius: 10px;
 }
 
 .showcase {
@@ -1082,7 +1102,7 @@ body {
 .home-scroll-icon {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 150px;
 }
 .home-scroll-icon svg {
   width: 44px;
@@ -1113,6 +1133,7 @@ body {
   display: flex;
   margin-top: 56px;
   align-items: center;
+  z-index: 9;
 }
 .boxes__cta .mainbtn {
   margin-right: 30px;
@@ -1135,6 +1156,7 @@ body {
   font-size: 1.375rem;
   font-family: "Open Sans", sans-serif;
   line-height: 2rem;
+  font-weight: 400;
 }
 
 .description {
@@ -1215,7 +1237,7 @@ body {
   height: 1311px;
   top: -435px;
   width: 3030px;
-  z-index: 80;
+  z-index: -9;
 }
 
 .section-clouds {
@@ -1229,17 +1251,15 @@ body {
   top: -40vh;
   height: 1066px;
   width: 1954px;
-  z-index: 80;
+  z-index: -9;
 }
 
 .hero__map {
-  position: absolute;
-  left: 660px;
-  top: 0;
+  flex: 1;
 }
 .hero__map #map {
-  width: 500px;
-  height: 570px;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .contact {
@@ -1262,7 +1282,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 1.375rem;
 }
 
 .contact-content {
@@ -1281,7 +1301,9 @@ body {
 }
 .contact-content__content {
   font-family: "Open Sans", sans-serif;
-  font-size: 23px;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  font-weight: 400;
 }
 
 .input {
@@ -1292,6 +1314,9 @@ body {
   margin-bottom: 20px;
   padding-left: 30px;
   outline: 0;
+  font-size: 1.375rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .textarea {
@@ -1303,6 +1328,9 @@ body {
   padding-left: 30px;
   padding-top: 20px;
   outline: 0;
+  font-size: 1.375rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .submit {
@@ -1322,6 +1350,25 @@ body {
   font-size: 3.375rem;
   font-weight: 200;
   margin-bottom: 40px;
+}
+
+.btn {
+  height: 56px !important;
+  padding: 0 25px 0 25px !important;
+  line-height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-transform: uppercase;
+}
+
+.contact-page {
+  display: flex;
+  z-index: 99999;
+  position: relative;
+}
+
+.footer a:hover, .header a:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
