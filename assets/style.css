@@ -462,6 +462,10 @@ html {
   z-index: -999;
 }
 
+.centered {
+  text-align: center;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -660,6 +664,7 @@ body {
   align-items: center !important;
   color: white;
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 .hero__button a a {
   font-family: "Montserrat", sans-serif;
@@ -698,6 +703,9 @@ body {
   align-items: center;
   background: #5987A4;
   border-radius: 10px;
+}
+.cta--contact {
+  margin-top: 161px;
 }
 .cta__text {
   font-family: "Montserrat", sans-serif;
@@ -959,7 +967,7 @@ body {
   margin-right: 16px;
 }
 .footer__main-text {
-  font-size: 57px;
+  font-size: 3.375rem;
   font-family: "Montserrat", sans-serif;
   color: #EF4130;
   margin-bottom: 15px;
@@ -1038,7 +1046,7 @@ body {
   background: linear-gradient(0deg, #adc4d2 61%, white 96%);
 }
 .footer-shade .footer-clouds {
-  background-image: url("images/footer_clouds.png");
+  background-image: url("images/cloud_PNG4.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1115,6 +1123,8 @@ body {
 }
 .companies__company {
   width: 280px;
+  display: flex;
+  justify-content: center;
 }
 .companies__company img {
   width: 100%;
@@ -1241,7 +1251,7 @@ body {
 }
 
 .section-clouds {
-  background-image: url(images/cloud_PNG4.png);
+  background-image: url("images/cloud_PNG4.png");
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -1328,6 +1338,7 @@ body {
   padding-left: 30px;
   padding-top: 20px;
   outline: 0;
+  resize: none;
   font-size: 1.375rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -1367,8 +1378,15 @@ body {
   position: relative;
 }
 
-.footer a:hover, .header a:hover {
-  color: white;
+.footer a:hover, .header a:hover, .second-cta a:hover {
+  color: #000000;
+}
+
+@media screen and (max-width: 1600px) {
+  .panel-indicator__elem--active {
+    width: 0;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

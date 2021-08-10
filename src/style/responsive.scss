@@ -1,0 +1,10 @@
+@media screen and (max-width: 1600px) {
+  .panel-indicator {
+    &__elem {
+      &--active {
+        width: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
