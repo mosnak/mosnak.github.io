@@ -72,6 +72,50 @@ $(document).ready(function (){
     var scene = document.getElementById('header-clouds-wrapp');
     var parallaxInstance = new Parallax(scene);
 
+
+    $('.gallery__item').click(function (e) {
+        e.preventDefault()
+        const imageUrl = $(this).data('image')
+        console.log(imageUrl)
+    })
+
+    $('.js-modal1').click(function (e) {
+        e.preventDefault()
+
+
+        // console.log($('.modal1').width())
+        // console.log(($('.wrapper--outer').width() - $('.js-modal1').width()) / 2 + 'px')
+
+        const overlay = $('.overlay')
+        overlay.show()
+        overlay.height($(document).height())
+        $('.modal1').css({
+            left: ($('.wrapper--outer').width() - $('.modal1').width()) / 2 + 'px'
+        })
+        $('.modal1').show()
+
+
+    })
+
+    $('.js-modal2').click(function (e) {
+        e.preventDefault()
+        const overlay = $('.overlay')
+        overlay.show()
+        overlay.height($(document).height())
+        $('.modal2').css({
+            left: ($('.wrapper--outer').width() - $('.modal2').width()) / 2 + 'px'
+        })
+        $('.modal2').show()
+
+    })
+
+    $('.overlay').click(function (e) {
+        e.preventDefault()
+        $('.modal1').hide()
+        $('.modal2').hide()
+        $(this).hide()
+    })
+
     // const movementStrength = 150;
     // const height = movementStrength / $(window).height();
     // const width = movementStrength / $(window).width();
@@ -106,4 +150,38 @@ $(document).ready(function (){
     // document.addEventListener("DOMContentLoaded", function() {
     //
     // });
+
+
+    $('.custom-select-trigger').click(function () {
+        $(this).toggleClass('open')
+        if($(this).hasClass('open')) {
+            $('.down').addClass('custom-select-trigger-icon-show')
+            $('.up').removeClass('custom-select-trigger-icon-show')
+        }else {
+            $('.down').removeClass('custom-select-trigger-icon-show')
+            $('.up').addClass('custom-select-trigger-icon-show')
+        }
+        $('.custom-select-options').toggleClass('custom-select-show')
+    })
+
+    $('.custom-option').click(function () {
+        $('.custom-select-trigger').removeClass('open')
+        if($(this).hasClass('open')) {
+            $('.down').addClass('custom-select-trigger-icon-show')
+            $('.up').removeClass('custom-select-trigger-icon-show')
+        }else {
+            $('.down').removeClass('custom-select-trigger-icon-show')
+            $('.up').addClass('custom-select-trigger-icon-show')
+        }
+        $('.custom-select-options').removeClass('custom-select-show')
+        const selectedText = $(this).html()
+        $('.custom-select-trigger span').html(selectedText)
+    })
+
+
+    $
+    $("input[type='radio'][name='solar_client']").change(function () {
+        $("input[type='radio'][name='solar_client']").parent().children('.custom-radio-icon').removeClass('active')
+        $("input[type='radio'][name='solar_client']:checked").parent().children('.custom-radio-icon').addClass('active')
+    });
 })
