@@ -8,3 +8,173 @@
     }
   }
 }
+
+@media screen and (max-width: 1366px) {
+  .wrapper {
+    &--inner {
+      max-width: 1200px;
+    }
+  }
+  .hero {
+    * {
+      order: 2;
+    }
+    &--internal {
+      align-items: center;
+    }
+    &__image {
+      &--internal {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        order: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    &--inner {
+      max-width: 760px;
+    }
+  }
+  .cta {
+    flex-direction: column;
+    padding: 20px 30px 20px 30px;
+    &__text {
+      text-align: center;
+    }
+  }
+  .facts {
+    flex-direction: column;
+  }
+  .story {
+    flex-direction: column;
+    &__text {
+      order: 2
+    }
+    &__image {
+      display: flex;
+      order: 1;
+      justify-content: center;
+    }
+  }
+  .showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  br {
+    display: none;
+  }
+  .wrapper {
+    &--inner {
+      max-width: 300px;
+    }
+  }
+  .hero {
+    &__title {
+      text-align: center;
+    }
+    &__important {
+      text-align: center;
+    }
+    &__regular {
+      text-align: center;
+    }
+    &__list {
+      text-align: center;
+    }
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .cta {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .text {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .story {
+    &__image {
+      margin-left: 0;
+      img {
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__text {
+      padding: 10px;
+      border-radius: 0;
+    }
+  }
+
+  .showcase {
+    &__title {
+      text-align: center;
+    }
+    &__image {
+      img {
+        width: 100%;
+        height: auto!important;
+        border-radius: 0
+      }
+    }
+    &__text {
+      padding: 10px;
+    }
+    &__content {
+      text-align: center;
+    }
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer{
+    &__main-text {
+      text-align: center;
+    }
+    &__info-text {
+      text-align: center;
+    }
+    &__list {
+      text-align: center;
+    }
+    &__icons {
+      justify-content: center;
+    }
+  }
+  .copy {
+    text-align: center;
+  }
+  .webmaster {
+    margin: 20px auto 0 auto;
+  }
+
+  .accordion {
+    &__title {
+      flex-direction: column;
+      text-align: center;
+    }
+    //&__text {
+    //  height: auto!important;
+    //}
+  }
+}

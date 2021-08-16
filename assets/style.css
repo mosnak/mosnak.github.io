@@ -1243,7 +1243,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  left: 0px;
+  left: 0;
   height: 1311px;
   top: -435px;
   width: 3030px;
@@ -1679,6 +1679,157 @@ body {
   .panel-indicator__elem--active {
     width: 0;
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .wrapper--inner {
+    max-width: 1200px;
+  }
+
+  .hero * {
+    order: 2;
+  }
+  .hero--internal {
+    align-items: center;
+  }
+  .hero__image--internal {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    order: 1;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper--inner {
+    max-width: 760px;
+  }
+
+  .cta {
+    flex-direction: column;
+    padding: 20px 30px 20px 30px;
+  }
+  .cta__text {
+    text-align: center;
+  }
+
+  .facts {
+    flex-direction: column;
+  }
+
+  .story {
+    flex-direction: column;
+  }
+  .story__text {
+    order: 2;
+  }
+  .story__image {
+    display: flex;
+    order: 1;
+    justify-content: center;
+  }
+
+  .showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  br {
+    display: none;
+  }
+
+  .wrapper--inner {
+    max-width: 300px;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+  .hero__important {
+    text-align: center;
+  }
+  .hero__regular {
+    text-align: center;
+  }
+  .hero__list {
+    text-align: center;
+  }
+  .hero__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cta {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .text {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .story__image {
+    margin-left: 0;
+  }
+  .story__image img {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  .story__text {
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .showcase__title {
+    text-align: center;
+  }
+  .showcase__image img {
+    width: 100%;
+    height: auto !important;
+    border-radius: 0;
+  }
+  .showcase__text {
+    padding: 10px;
+  }
+  .showcase__content {
+    text-align: center;
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer__main-text {
+    text-align: center;
+  }
+  .footer__info-text {
+    text-align: center;
+  }
+  .footer__list {
+    text-align: center;
+  }
+  .footer__icons {
+    justify-content: center;
+  }
+
+  .copy {
+    text-align: center;
+  }
+
+  .webmaster {
+    margin: 20px auto 0 auto;
+  }
+
+  .accordion__title {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
