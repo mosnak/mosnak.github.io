@@ -1,3 +1,12 @@
+.menu--mobile-close {
+  display: none;
+  width: 25px;
+  z-index: 9;
+}
+.menu--mobile-open {
+  width: 25px ;
+}
+
 @media screen and (max-width: 1600px) {
   .panel-indicator {
     &__elem {
@@ -10,6 +19,9 @@
 }
 
 @media screen and (max-width: 1366px) {
+  .header-shade {
+    display: none;
+  }
   .wrapper {
     &--inner {
       max-width: 1200px;
@@ -35,6 +47,34 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .menu {
+    &--mobile {
+      display: flex;
+    }
+
+    &.open {
+      z-index: 999;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__wrapper.open {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: white;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+
+
   .wrapper {
     &--inner {
       max-width: 760px;
@@ -71,6 +111,12 @@
 }
 
 @media screen and (max-width: 800px) {
+  .logo {
+    width: 200px;
+    img {
+      width: 100%;
+    }
+  }
   br {
     display: none;
   }

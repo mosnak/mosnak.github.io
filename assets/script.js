@@ -184,4 +184,27 @@ $(document).ready(function (){
         $("input[type='radio'][name='solar_client']").parent().children('.custom-radio-icon').removeClass('active')
         $("input[type='radio'][name='solar_client']:checked").parent().children('.custom-radio-icon').addClass('active')
     });
+
+    $('.menu--mobile-open').click(function () {
+        $('.menu').addClass('open')
+        $('.menu__wrapper').addClass('open')
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
+        $('.menu--mobile-close').show()
+        $('.menu--mobile-open').hide()
+    })
+
+    $('.menu--mobile-close').click(function() {
+        $('.menu').removeClass('open')
+        $('.menu__wrapper').removeClass('open')
+        $('html, body').css({
+            'overflow-x': 'hidden',
+            'overflow-y': 'auto',
+            height: 'auto'
+        });
+        $('.menu--mobile-close').hide()
+        $('.menu--mobile-open').show()
+    })
 })
