@@ -1698,7 +1698,55 @@ body {
   }
 }
 @media screen and (max-width: 1366px) {
+  .hero {
+    margin-top: 0;
+    margin-bottom: 85px;
+  }
+
+  .header {
+    margin-bottom: 0;
+    margin-bottom: 85px;
+  }
+
+  .cta {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 85px;
+  }
+  .cta__text {
+    margin-bottom: 30px;
+  }
+
+  .text {
+    margin-top: 0;
+  }
+
+  .facts {
+    margin-top: 0;
+  }
+
+  .fact {
+    margin-bottom: 100px;
+  }
+  .fact__title {
+    margin-bottom: 30px;
+  }
+
+  .story {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 85px;
+  }
+
+  .showcase {
+    margin-top: 0;
+  }
+
   .header-shade {
+    display: none;
+  }
+
+  #header-clouds-wrapp {
     display: none;
   }
 
