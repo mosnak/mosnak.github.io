@@ -1832,5 +1832,8 @@ body {
     text-align: center;
   }
 }
+.mainwrapp {
+  overflow-x: hidden;
+}
 
 /*# sourceMappingURL=style.css.map */
