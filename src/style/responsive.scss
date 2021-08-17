@@ -1,10 +1,12 @@
 .menu--mobile-close {
   display: none;
   width: 25px;
+  height: 25px;
   z-index: 9;
 }
 .menu--mobile-open {
-  width: 25px ;
+  width: 25px;
+  height: 25px;
 }
 
 @media screen and (max-width: 1600px) {
