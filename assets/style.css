@@ -2126,6 +2126,15 @@ body {
 
   .showcase__text {
     margin: 0 25px 0 25px;
+    padding-bottom: 25px;
+  }
+
+  .footer__main-text {
+    padding: 0 25px 0 25px;
+  }
+
+  .main-title {
+    padding: 0 25px 0 25px;
   }
 }
 @media screen and (max-width: 374px) {

@@ -79,6 +79,14 @@ $(document).ready(function (){
         $('.header-shade').width(screenWidth)
     }
 
+    // console.log(screenWidth)
+    if(screenWidth<801) {
+// console.log($('.facts__cta').height() / 2 )
+        $('.facts__cta').css( {
+            bottom: '-' + $('.facts__cta').height() / 2 + 'px'
+        })
+    }
+
 
 
     $('.gallery__item').click(function (e) {
