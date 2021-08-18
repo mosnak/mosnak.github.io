@@ -552,10 +552,14 @@ body {
   text-decoration: none;
   font-size: 1.375rem;
 }
+.menu__item--mobile {
+  display: none;
+}
 .menu__item--phone a {
   padding: 13px 25px 13px 25px;
   background: white;
   border-radius: 8px;
+  align-items: center;
 }
 .menu__item--phone a svg {
   width: 30px;
@@ -1602,6 +1606,10 @@ body {
   width: calc(100% - 60px);
 }
 
+.custom-select-trigger span {
+  color: #707070;
+}
+
 .custom-select-options {
   margin-top: -21px;
   display: none;
@@ -1844,6 +1852,79 @@ body {
   }
 }
 @media screen and (max-width: 1279px) {
+  .modal {
+    width: 100%;
+    left: 0 !important;
+    text-align: center;
+    border-radius: 0;
+  }
+
+  .modal .main-title {
+    padding: 0;
+  }
+
+  .modal .text-important {
+    text-align: center;
+  }
+
+  .modal2__wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .modal1__wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .modal__form {
+    width: 100%;
+    order: 2;
+  }
+
+  .modal__content {
+    padding-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .modal__radio-wrapper {
+    flex-direction: column;
+  }
+
+  .modal__radio-wrapper label {
+    margin-bottom: 25px;
+  }
+
+  .modal__radio-wrapper-nomargin {
+    margin-bottom: 0;
+  }
+
+  .modal__text {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
+  .contact-form__footer {
+    flex-direction: column;
+  }
+  .contact-form__footer div {
+    margin-bottom: 15px;
+  }
+
+  .menu__wrapper.open .menu__item--phone {
+    position: absolute;
+    bottom: 50px;
+    margin: 0;
+  }
+
+  .menu__wrapper.open .menu__item {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .menu__wrapper.open .menu__item a {
+    font-size: 2rem !important;
+  }
+
   .hero {
     flex-direction: column;
   }
@@ -1875,6 +1956,11 @@ body {
   .menu--mobile {
     display: flex;
   }
+  .menu__item--mobile {
+    display: flex;
+    position: absolute;
+    bottom: 160px;
+  }
   .menu.open {
     z-index: 999;
   }
@@ -1886,7 +1972,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: white;
+    background: #C6D6E0;
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -1969,6 +2055,10 @@ body {
   .facts {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .fact {
+    padding: 0 10px;
   }
 
   .logo {
@@ -2135,11 +2225,6 @@ body {
 
   .main-title {
     padding: 0 25px 0 25px;
-  }
-}
-@media screen and (max-width: 374px) {
-  .cta__btn a {
-    font-size: 1rem;
   }
 }
 .mainwrapp {

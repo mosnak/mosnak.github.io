@@ -37,6 +37,7 @@ $fontDefault: 'Open Sans', sans-serif;
     margin-left: 15px;
     font-family: $fontMain;
   }
+
 }
 
 @mixin mainbtn() {
@@ -163,10 +164,13 @@ body {
       font-weight: $mainFontWeightMedium;
       @include link($defaultTextColor, $fontMain);
     }
+    &--mobile {
+      display: none;
+    }
     &--phone {
       a {
-        @include phone()
-
+        @include phone();
+        align-items: center;
         //padding: 10px 25px 10px 25px;
         //background: white;
         //svg {
@@ -1273,6 +1277,10 @@ body {
   justify-content: space-between;
   padding-right: 30px;
   width: calc(100% - 60px);
+}
+
+.custom-select-trigger span {
+  color: #707070;
 }
 
 .custom-select-options {
