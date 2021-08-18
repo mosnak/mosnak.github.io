@@ -221,8 +221,8 @@
 
   .menu__wrapper.open .menu__item--phone {
     position: absolute;
-    bottom: 50px;
-    margin: 0;
+    bottom: 2%;
+    margin-bottom: 0!important;
   }
 
   .menu__wrapper.open .menu__item {
@@ -270,7 +270,7 @@
       &--mobile {
         display: flex;
         position: absolute;
-        bottom: 160px;
+        bottom: 12%;
       }
     }
 
