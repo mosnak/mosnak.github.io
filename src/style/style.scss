@@ -35,6 +35,7 @@ $fontDefault: 'Open Sans', sans-serif;
   span {
     font-weight: $mainFontWeightMedium;
     margin-left: 15px;
+    font-family: $fontMain;
   }
 }
 
@@ -62,6 +63,7 @@ html {
 * {
   //z-index: 99;
   font-family: $fontDefault;
+  color: $defaultTextColor;
 }
 
 .z-top {
@@ -364,9 +366,12 @@ body {
   &--light {
     border-radius: 10px;
     background: white;
-    -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    //-webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    //-moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    //box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%);
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%);
   }
   &--internal {
     margin-top: 161px;
@@ -426,7 +431,7 @@ body {
     span {
       font-family: $fontMain;
       font-size: 1.375rem;
-      font-weight: $mainFontWeightMedium;
+      font-weight: $mainFontWeightBold;
 
     }
     .open {
@@ -522,6 +527,9 @@ body {
     font-size: 1.375rem;
     line-height: 2rem;
     font-family: $fontDefault;
+    p {
+      color: white;
+    }
   }
   &__image {
     margin-left: -45px;
@@ -670,7 +678,7 @@ body {
     background: linear-gradient(0deg, #adc4d2 61%, white 96%);
   }
   .footer-clouds {
-    background-image: url("images/cloud_PNG4.png");
+    background-image: url("images/clouds_optimised.png");
     //background-image: url("images/footer_clouds.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -706,7 +714,7 @@ body {
 }
 
 .header-shade {
-  background-image: url("images/shade.png");
+  background-image: url("images/shade.svg");
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -725,7 +733,7 @@ body {
 }
 
 .header-clouds {
-  background-image: url("images/cloud_PNG4.png");
+  background-image: url("images/clouds_optimised.png");
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -871,7 +879,7 @@ body {
 }
 
 .section-shade {
-  background-image: url(images/shade.png);
+  background-image: url(images/shade.svg);
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -887,7 +895,7 @@ body {
 }
 
 .section-clouds {
-  background-image: url("images/cloud_PNG4.png");
+  background-image: url("images/clouds_optimised.png");
   background-position-x: right;
   background-position-y: top;
   background-repeat: no-repeat;
@@ -932,7 +940,8 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: $fontMain;
-    font-size: 1.375rem;
+    //font-size: 1.375rem;
+    font-size: 1rem;
   }
 }
 
@@ -1149,7 +1158,7 @@ body {
     font-size: 1.375rem;
     font-family: $fontMain;
     font-weight: $mainFontWeightMedium;
-    width: 100%;
+    width: calc(100% - 30px);
   }
 
   border-radius: 10px;
@@ -1179,7 +1188,7 @@ body {
     /* background: #707070; */
     /* opacity: 5%; */
     color: rgba(112, 112, 112, 1);;
-    background-color: rgba(112, 112, 112, 0.05);
+    background-color: rgba(112, 112, 112, 0.1);
     outline: 0;
     margin-bottom: 21px;
 
@@ -1223,7 +1232,7 @@ body {
     }
   }
   &__radio-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1251,7 +1260,7 @@ body {
   /* background: #707070; */
   /* opacity: 5%; */
   color: rgba(112, 112, 112, 1);;
-  background-color: rgba(112, 112, 112, 0.05);
+  background-color: rgba(112, 112, 112, 0.1);
   outline: 0;
   margin-bottom: 21px;
   display: flex;
@@ -1291,6 +1300,21 @@ body {
   //margin-bottom: 21px;
 
 
+  height: 70px;
+  /* padding-left: 30px; */
+  padding: 0;
+  padding-left: 30px;
+  border: 0;
+  border-radius: 10px;
+  /* background: #707070; */
+  /* opacity: 5%; */
+  color: rgba(112, 112, 112, 1);;
+  background-color: rgba(112, 112, 112, 0.1);
+  outline: 0;
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+
   font-size: 1.375rem;
   font-family: $fontMain;
   font-weight: $mainFontWeightMedium;
@@ -1326,7 +1350,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 10px;
-  background: #F2F2F2;
+  background-color: rgba(112, 112, 112, 0.1);
   z-index: 9;
   display: flex;
   justify-content: center;
@@ -1353,6 +1377,26 @@ body {
   display: block;
 }
 
+
+
+.scrollbar::-webkit-scrollbar-track
+{
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  //background-color: #F5F5F5;
+
+}
+
+.scrollbar::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+  background-color: #c4d5df;
+  border: 0px solid #f9fbfc;
+}
 
 
 

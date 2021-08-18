@@ -19,6 +19,10 @@ $(document).ready(function (){
 
 
     $('.accordion__title').click(function() {
+        // $('.accordion__text').each(function (i) {
+        //     $(this).parent().data('height', $(this).height());
+        //     $(this).height(0);
+        // })
         const opened = $('.accordion--open');
         if(opened) {
             opened.removeClass('accordion--open');

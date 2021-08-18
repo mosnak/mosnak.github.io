@@ -27,7 +27,7 @@
 
   .header-shade {
     right: 0!important;
-    top: 0;
+    top: -140px;
     height: 100vh!important;
     background-position-x: center;
     background-size: cover;
@@ -35,7 +35,7 @@
 
   #header-clouds-wrapp {
     right: 0!important;
-    top: 0;
+    top: -140px;
     height: 100vh!important;
   }
 
@@ -236,6 +236,7 @@
   }
   .story {
     flex-direction: column;
+    margin-top: -60px;
     &__text {
       order: 2
     }
@@ -243,6 +244,8 @@
       display: flex;
       order: 1;
       justify-content: center;
+      bottom: -100px;
+      position: relative;
     }
   }
   .showcase {
@@ -268,6 +271,22 @@
 }
 
 @media screen and (max-width: 799px) {
+  .header-shade {
+    right: 0!important;
+    top: -200px;
+    height: 100vh!important;
+    background-position-x: center;
+    background-size: cover;
+  }
+
+  #header-clouds-wrapp {
+    right: 0!important;
+    top: 0;
+    height: 100vh!important;
+  }
+
+
+
   .gallery {
     flex-direction: column;
     * {
@@ -289,11 +308,13 @@
   br {
     display: none;
   }
-  //.wrapper {
-  //  &--inner {
-  //    max-width: 580px;
-  //  }
-  //}
+  .wrapper {
+    &--inner {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+  }
   .hero {
     &__title {
       text-align: center;
@@ -319,7 +340,11 @@
   }
   .cta {
     border-radius: 0;
-    padding: 10px;
+    //padding: 10px;
+    padding: 25px 10px;
+    &__btn {
+      margin-top: 25px;
+    }
   }
 
   .text {
@@ -328,17 +353,24 @@
   }
 
   .story {
+    margin-top: 0;
     &__image {
       margin-left: 0;
+      position: static;
+      picture {
+        width: 100%;
+      }
       img {
         border-radius: 0;
         width: 100%;
         height: auto;
+        vertical-align: bottom;
       }
     }
     &__text {
       padding: 10px;
       border-radius: 0;
+      margin-top: 0;
     }
   }
 
@@ -374,31 +406,72 @@
     }
     &__list {
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
     &__icons {
       justify-content: center;
+      margin-top: 26px;
     }
     &__cta {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
   .copy {
     text-align: center;
   }
   .webmaster {
-    margin: 20px auto 0 auto;
+    margin: 30px auto 0 auto;
   }
 
   .accordion {
     &__title {
       flex-direction: column;
       text-align: center;
+      span {
+        margin-bottom: 30px;
+        margin: 0 25px 30px 25px;
+      }
     }
     //&__text {
     //  height: auto!important;
     //}
   }
+
+  .header {
+    margin: 0 25px 0 25px;
+  }
+  .hero {
+    &__mobile-content {
+      margin: 0 25px 0 25px;
+      * {
+        max-width: 100%;
+      }
+    }
+  }
+  .text {
+    margin: 0 25px 0 25px;
+  }
+  .title {
+    margin: 0 25px 0 25px;
+  }
+  .accordion {
+    &__text {
+      margin: 0 25px 0 25px;
+    }
+  }
+
+  .story {
+    &__text {
+      padding: 0 25px 0 25px;
+    }
+  }
+
+  .showcase {
+    &__text {
+      margin: 0 25px 0 25px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 374px) {
