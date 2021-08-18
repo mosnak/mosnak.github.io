@@ -67,10 +67,14 @@ $(document).ready(function (){
         // height: '888px'
     })
 
+// console.log(siteWidth)
+    if(screenWidth>1366) {
+        var scene = document.getElementById('header-clouds-wrapp');
+        var parallaxInstance = new Parallax(scene);
+    } else {
+        $('.header-shade').width(screenWidth)
+    }
 
-
-    var scene = document.getElementById('header-clouds-wrapp');
-    var parallaxInstance = new Parallax(scene);
 
 
     $('.gallery__item').click(function (e) {
