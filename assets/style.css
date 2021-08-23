@@ -1773,6 +1773,26 @@ body {
   }
 }
 @media screen and (max-width: 1365px) {
+  .wrapper--fullscreen {
+    height: auto;
+  }
+
+  .boxes {
+    margin-bottom: 85px;
+  }
+
+  .warranty {
+    margin-bottom: 85px;
+  }
+
+  .panel-indicator {
+    display: none;
+  }
+
+  .home-scroll-icon {
+    display: none;
+  }
+
   .menu__item {
     z-index: 9;
   }
@@ -1872,6 +1892,11 @@ body {
     display: flex;
     flex-direction: row;
   }
+  .hero--home {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
   .hero__image {
     display: block !important;
     flex: 1;
@@ -1887,12 +1912,61 @@ body {
     left: 0;
     order: 2;
   }
+  .hero__image--home {
+    position: relative;
+    top: 0;
+    left: 0;
+    order: 2;
+  }
 
   .accordions {
     margin-bottom: 85px;
   }
 }
 @media screen and (max-width: 1279px) {
+  .main-title {
+    text-align: center;
+  }
+
+  .boxes__items {
+    flex-direction: column;
+  }
+
+  .boxes__item {
+    margin-bottom: 40px;
+  }
+
+  .hero__important.hero__important--small-margin {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__regular {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .boxes__cta {
+    justify-content: center;
+  }
+
+  .warranty__content {
+    text-align: center;
+  }
+
+  .hero__mobile-content * {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero--home .hero__cta {
+    justify-content: center;
+  }
+
+  .hero--home .hero__cta * {
+    width: auto;
+  }
+
   .modal {
     width: 100%;
     left: 0 !important;
@@ -2072,6 +2146,54 @@ body {
   }
 }
 @media screen and (max-width: 799px) {
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__button--with-margin {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero__regular {
+    margin: 0 25px 0 25px;
+  }
+
+  .warranty .text-important {
+    margin: 0 25px 0 25px;
+  }
+
+  .warranty__content {
+    margin: 0 25px 0 25px;
+    margin-bottom: 40px;
+  }
+
+  .box-text {
+    text-align: center;
+    margin: 0 25px 0 25px;
+  }
+
+  .boxes__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxes__cta .mainbtn {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .warranty__images {
+    display: block;
+    width: 100%;
+  }
+
+  .warranty__image {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
   .header-shade {
     right: 0 !important;
     top: -200px;

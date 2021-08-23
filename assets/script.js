@@ -223,6 +223,10 @@ $(document).ready(function (){
         });
         $('.menu--mobile-close').show()
         $('.menu--mobile-open').hide()
+        $('.panel').css({
+            height: '100vh',
+            overflow: 'hidden'
+        })
     })
 
     $('.menu--mobile-close').click(function() {
@@ -235,5 +239,9 @@ $(document).ready(function (){
         });
         $('.menu--mobile-close').hide()
         $('.menu--mobile-open').show()
+        $('.panel').css({
+            height: 'auto',
+            overflow: 'auto'
+        })
     })
 })
