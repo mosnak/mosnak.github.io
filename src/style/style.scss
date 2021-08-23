@@ -729,6 +729,20 @@ body {
   z-index: -2;
 }
 
+.header-shade-mobile {
+  background-image: url("images/shade.svg");
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -500px;
+  width: 3033px;
+  height: 1311px;
+  z-index: 0;
+  right: -1500px;
+}
+
 #header-clouds-wrapp {
   position: absolute;
   width: 100%;
@@ -744,6 +758,31 @@ body {
   background-size: contain;
   height: 100%;
 }
+
+.header-clouds-mobile {
+  background-image: url("images/clouds_optimised.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.header-clouds-mobile1 {
+  position: absolute;
+  width: 1954px;
+  height: 1065px;
+  bottom: 0;
+}
+
+.header-clouds-mobile2 {
+  position: absolute;
+  width: 1954px;
+  height: 1065px;
+  bottom: -50px;
+}
+
+
+
 
 /*homepage*/
 
@@ -766,6 +805,7 @@ body {
     width: 280px;
     display: flex;
     justify-content: center;
+    text-align: center;
     img {
       width: 100%;
     }

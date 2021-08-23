@@ -87,6 +87,19 @@ $(document).ready(function (){
         })
     }
 
+    if(screenWidth<1280) {
+// console.log($('.facts__cta').height() / 2 )
+        $('.header-shade-mobile').css( {
+            right: '-' +  (3030 - screenWidth) / 2 + 'px'
+        })
+
+        $('.header-clouds-mobile1').css( {
+            right: '-' +  (1954 - screenWidth + 200) / 2 + 'px'
+        })
+    }
+
+
+
 
 
     $('.gallery__item').click(function (e) {
