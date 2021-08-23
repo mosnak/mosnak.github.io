@@ -18,9 +18,40 @@
       }
     }
   }
+  .panel-indicator {
+    display: none;
+  }
+
+  .wrapper--fullscreen {
+    height: auto;
+  }
+
+  .home-scroll-icon {
+    display: none;
+  }
+  .hero--home {
+    margin-bottom: 185px;
+  }
+
+  .companies, .boxes, .beindependent, .warranty {
+    margin-bottom: 85px;
+  }
 }
 
 @media screen and (max-width: 1365px) {
+
+  .beindependent {
+    flex-direction: row;
+  }
+
+  .beindependent .hero__image {
+    position: static;
+  }
+
+  .panel-indicator {
+    display: none;
+  }
+
   .wrapper--fullscreen {
     height: auto;
   }
@@ -35,9 +66,7 @@
   .panel-indicator {
     display: none;
   }
-  .home-scroll-icon {
-    display: none;
-  }
+
 
   .menu {
     &__item {
@@ -191,6 +220,41 @@
 }
 
 @media screen and (max-width: 1279px) {
+
+  .boxes__item--with-margin {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .boxes__cta .mainbtn {
+    width: auto;
+  }
+
+  .boxes__cta .second-cta {
+    width: auto;
+  }
+
+
+
+  .beindependent {
+    flex-direction: column;
+  }
+
+  .header-clouds-mobile {
+    background-image: url("images/clouds_optimised.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+
+  .header-clouds-mobile1 {
+    position: absolute;
+    width: 1954px;
+    height: 1065px;
+    bottom: 0;
+  }
+
 
   .main-title {
     text-align: center;
@@ -441,11 +505,15 @@
     margin-bottom: 40px;
   }
 
-  .hero__regular {
+  //.hero__regular {
+  //  margin: 0 25px 0 25px;
+  //}
+
+  .warranty .text-important {
     margin: 0 25px 0 25px;
   }
 
-  .warranty .text-important {
+  .box-title {
     margin: 0 25px 0 25px;
   }
 
@@ -694,6 +762,13 @@
 
   .main-title {
     padding: 0 25px 0 25px;
+  }
+
+  .beindependent .main-title {
+    padding: 0;
+  }
+  .beindependent .hero__regular {
+    margin: 0!important;
   }
 
 }

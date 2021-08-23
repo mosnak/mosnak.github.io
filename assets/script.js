@@ -241,7 +241,7 @@ $(document).ready(function (){
         $('.menu--mobile-open').show()
         $('.panel').css({
             height: 'auto',
-            overflow: 'auto'
+            overflow: 'hidden'
         })
     })
 })
