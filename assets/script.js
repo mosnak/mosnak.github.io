@@ -227,6 +227,9 @@ $(document).ready(function (){
             height: '100vh',
             overflow: 'hidden'
         })
+        $('.contact-page').css( {
+            'z-index': 9
+        })
     })
 
     $('.menu--mobile-close').click(function() {
@@ -242,6 +245,9 @@ $(document).ready(function (){
         $('.panel').css({
             height: 'auto',
             overflow: 'hidden'
+        })
+        $('.contact-page').css( {
+            'z-index': 9999
         })
     })
 })
