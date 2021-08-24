@@ -436,7 +436,8 @@
       &--mobile {
         display: flex;
         position: fixed;
-        bottom: 12%;
+        bottom: 18%;
+        z-index: 9999;
       }
     }
 
