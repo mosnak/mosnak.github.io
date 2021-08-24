@@ -2100,7 +2100,7 @@ body {
 
   .menu__wrapper.open .menu__item--phone {
     position: fixed;
-    bottom: 2%;
+    bottom: 4%;
     margin-bottom: 0 !important;
   }
 
