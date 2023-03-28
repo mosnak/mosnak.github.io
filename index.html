@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mnozenje</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         .wrapper {
             width: 100%;
             display: flex;
@@ -18,7 +22,9 @@
             display: flex;
         }
         .statistic {
-            margin-top: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         #ok {
@@ -27,13 +33,19 @@
         .img {
             width: 100%;
         }
+        .bigFont {
+            font-size: 46px;
+        }
+        .x {
+            padding: 0 5px 0 5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="wrapper">
     <div class="row">
-        <div id="a"></div><div>*</div><div id="b"></div>
+        <div id="a" class="bigFont"></div><div class="bigFont x">X</div><div class="bigFont" id="b"></div>
     </div>
     <div class="row">
         <div>=</div><div class="result"><input id="result" type="number"></div>
@@ -70,7 +82,7 @@
     const ok = document.getElementById('ok');
 
     axios.get('https://api.npoint.io/256b95e5c552592d90c5').then(function (resp) {
-        data = resp.data;
+        data = resp.data.data;
         statistic.innerText = 'Ukupno: ' + data.total + ", Tacno: " + data.correct
     });
 
@@ -90,7 +102,7 @@
         //     correct: 0,
         // }
         statistic.innerText = 'Ukupno: ' + data.total + ", Tacno: " + data.correct
-        axios.post('https://api.npoint.io/256b95e5c552592d90c5', { data: data },).
+        axios.post('https://api.npoint.io/256b95e5c552592d90c5', { data },).
         then(function (resp) {});
 
         if(isCorrect) {
