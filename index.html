@@ -24,6 +24,9 @@
         #ok {
             margin-top: 15px;
         }
+        .img {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +40,9 @@
     </div>
     <div class="row">
         <div id="ok">OK</div>
+    </div>
+    <div class="row">
+        <img class="img" src="slika.png" alt="">
     </div>
     <div id="statistic" class="row statistic"></div>
 </div>
@@ -73,7 +79,8 @@
             return;
         }
         let isCorrect = parseInt(result.value) === correctResult;
-        result.value = ''
+        result.value = '';
+        result.focus();
         data = {
             total: data.total + 1,
             correct: isCorrect ? data.correct + 1 : data.correct,
