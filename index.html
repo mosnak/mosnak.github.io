@@ -64,7 +64,7 @@
     const ok = document.getElementById('ok');
 
     axios.get('https://api.npoint.io/256b95e5c552592d90c5').then(function (resp) {
-        data = resp.data.data;
+        data = resp.data;
         statistic.innerText = 'Ukupno: ' + data.total + ", Tacno: " + data.correct
     });
 
